@@ -1,16 +1,18 @@
-var getMaxElement = function(arr) {
+'use strict';
+
+var getMaxElement = function (arr) {
   var max = -1;
 
-  for (var i = 0 ; i < arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
     var time = arr[i];
     if (time > max) {
       max = time;
     }
   }
   return max;
-}
+};
 
-var drawHistogram = function(ctx, names, times) {
+var drawHistogram = function (ctx, names, times) {
   var histogramHeight = 150; // высота гистограммы
   var step = histogramHeight / (getMaxElement(times)); // высота колонки
 
@@ -27,13 +29,13 @@ var drawHistogram = function(ctx, names, times) {
     ctx.fillStyle = (names[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'rgba(0, 0, 255, ' + fillColumn(0.1, 0.9) + ')';
     ctx.fillRect(initialX + indent * i, initialY + (histogramHeight - times[i] * step), barWidth, times[i] * step);
   }
-}
+};
 
-var fillColumn = function(minNumber, maxNumber) {
+var fillColumn = function (minNumber, maxNumber) {
   return Math.random() * (maxNumber - minNumber) + minNumber;
-}
+};
 
-window.renderStatistics = function(ctx, names, times) {
+window.renderStatistics = function (ctx, names, times) {
   ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
   ctx.shadowOffsetX = 10;
   ctx.shadowOffsetY = 10;
