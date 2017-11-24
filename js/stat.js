@@ -26,12 +26,12 @@ var drawHistogram = function (ctx, names, times) {
     ctx.fillStyle = '#000000';
     ctx.fillText(names[i], initialX + indent * i, 270);
     ctx.fillText(Math.round(times[i]), initialX + indent * i, initialY + (histogramHeight - times[i] * step) - lineHeight);
-    ctx.fillStyle = (names[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'rgba(0, 0, 255, ' + fillColumn(0.1, 0.9) + ')';
+    ctx.fillStyle = (names[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'rgba(0, 0, 255, ' + generateOpacity(0.1, 0.9) + ')';
     ctx.fillRect(initialX + indent * i, initialY + (histogramHeight - times[i] * step), barWidth, times[i] * step);
   }
 };
 
-var fillColumn = function (minNumber, maxNumber) {
+var generateOpacity = function (minNumber, maxNumber) {
   return Math.random() * (maxNumber - minNumber) + minNumber;
 };
 
