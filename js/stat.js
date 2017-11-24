@@ -33,7 +33,7 @@ var drawHistograms = function (ctx, names, times) {
   for (var i = 0; i < times.length; i++) {
     drawHistogram(i, ctx, names, times);
   }
-}
+};
 
 var generateOpacity = function (minNumber, maxNumber) {
   return Math.random() * (maxNumber - minNumber) + minNumber;
