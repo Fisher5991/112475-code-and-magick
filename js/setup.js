@@ -21,9 +21,9 @@ var generateCharacters = function () {
   var charactersAmount = 4;
   for (var i = 0; i < charactersAmount; i++) {
     var character = {
-      'name': names[generateNumber(0, names.length - 1)] + ' ' + secondNames[generateNumber(0, names.length - 1)],
-      'coatColor': mantleColors[generateNumber(0, names.length - 1)],
-      'eyesColor': eyesColors[generateNumber(0, names.length - 1)]
+      name: names[generateNumber(0, names.length - 1)] + ' ' + secondNames[generateNumber(0, names.length - 1)],
+      coatColor: mantleColors[generateNumber(0, names.length - 1)],
+      eyesColor: eyesColors[generateNumber(0, names.length - 1)]
     };
     similarCharacters.push(character);
   }
