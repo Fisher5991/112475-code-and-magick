@@ -22,8 +22,8 @@ var generateNumber = function (minNumber, maxNumber) {
 };
 
 var generateCharacters = function () {
-  var charactersAmount = 4; // Количество похожих персонажей - 4
-  for (var i = 0; i < charactersAmount; i++) { //создаём каждого персонажа с помощью цикла
+  var charactersAmount = 4; // количество похожих персонажей - 4
+  for (var i = 0; i < charactersAmount; i++) { // создаём каждого персонажа с помощью цикла
     var character = {
       name: names[generateNumber(0, names.length - 1)] + ' ' + secondNames[generateNumber(0, names.length - 1)],
       coatColor: coatColors[generateNumber(0, names.length - 1)],
