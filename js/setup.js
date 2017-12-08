@@ -98,7 +98,7 @@ var changeColor = function (objectColor, arrayColors, colorIndex, attribute) {
   return colorIndex;
 };
 
-setupOpen.addEventListener('click', function () {
+setupOpen.addEventListener('click', function () { // пока оставляю так
   openPopup();
 });
 
@@ -108,7 +108,7 @@ setupOpen.addEventListener('keydown', function (evt) {
   }
 });
 
-setupClose.addEventListener('click', function () {
+setupClose.addEventListener('click', function () { // пока оставляю так
   closePopup();
 });
 
