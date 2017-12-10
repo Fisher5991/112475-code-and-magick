@@ -12,5 +12,5 @@
       colorIndex++;
       return colorIndex;
     });
-  }
+  };
 })();

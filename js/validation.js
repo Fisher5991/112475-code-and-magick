@@ -12,5 +12,5 @@
         evt.target.setCustomValidity('');
       }
     });
-  }
+  };
 })();

@@ -2,7 +2,6 @@
 
 (function () {
   var setup = document.querySelector('.setup');
-  var setupUserName = setup.querySelector('.setup-user-name');
   var setupOpen = document.querySelector('.setup-open');
   var setupClose = setup.querySelector('.setup-close');
 
