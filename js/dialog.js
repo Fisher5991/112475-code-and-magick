@@ -4,9 +4,12 @@
   var setup = document.querySelector('.setup');
   var setupOpen = document.querySelector('.setup-open');
   var setupClose = setup.querySelector('.setup-close');
+  var setupUserName = setup.querySelector('.setup-user-name');
 
   var onPopupEscPress = function (evt) {
-    window.util.isEscEvent(evt, closePopup);
+    if (setupUserName !== document.activeElement) {
+      window.util.isEscEvent(evt, closePopup);
+    }
   };
 
   setupOpen.addEventListener('click', function () {
