@@ -8,6 +8,8 @@
 
   var openPopup = function () {
     setup.classList.remove('hidden');
+    setup.style.top = setupPrimaryCoords.x;
+    setup.style.left = setupPrimaryCoords.y;
     document.addEventListener('keydown', onPopupEscPress);
   };
 
@@ -38,10 +40,16 @@
     window.util.isEnterEvent(evt, closePopup);
   });
 
+  var setupPrimaryCoords = {
+    x: setup.style.top,
+    y: setup.style.left
+  };
+
   var dialogHandle = setup.querySelector('.setup-user-pic');
   dialogHandle.style.zIndex = 1;
 
-  dialogHandle.addEventListener('mousedown', function (evt) {
+  var onDialogMouseDown = function (evt) {
+
     evt.preventDefault();
 
     var startCoords = {
@@ -75,5 +83,7 @@
 
     document.addEventListener('mousemove', onDialogMouseMove);
     document.addEventListener('mouseup', onDialogMouseUp);
-  });
+  };
+
+  dialogHandle.addEventListener('mousedown', onDialogMouseDown);
 })();
