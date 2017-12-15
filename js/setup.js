@@ -74,9 +74,9 @@
   var eyesColorIndex = 1;
   var fireballColorIndex = 1;
 
-  window.colorize(wizardCoat, coatColors, coatColorIndex, 'fill');
-  window.colorize(wizardEyes, eyesColors, eyesColorIndex, 'fill');
-  window.colorize(setupFireball, fireballColors, fireballColorIndex, 'backgroundColor');
+  window.colorizeElement(wizardCoat, coatColors, coatColorIndex, 'fill');
+  window.colorizeElement(wizardEyes, eyesColors, eyesColorIndex, 'fill');
+  window.colorizeElement(setupFireball, fireballColors, fireballColorIndex, 'backgroundColor');
 
   var shopElement = setup.querySelector('.setup-artifacts-shop');
   var artifactsElement = setup.querySelector('.setup-artifacts');
