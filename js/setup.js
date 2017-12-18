@@ -1,21 +1,8 @@
 'use strict';
 
 (function () {
-  var coatColors = [
-    'rgb(101, 137, 164)',
-    'rgb(241, 43, 107)',
-    'rgb(146, 100, 161)',
-    'rgb(56, 159, 117)',
-    'rgb(215, 210, 55)',
-    'rgb(0, 0, 0)'
-  ];
-
-  var eyesColors = ['black', 'red', 'blue', 'yellow', 'green'];
   var setup = document.querySelector('.setup');
   var setupSimilar = setup.querySelector('.setup-similar');
-  var similarCharacters = [];
-  var names = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
-  var secondNames = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
 
   var renderSimilarCharacters = function (dataCharacters) { // передаём параметром данные персонажей
     var template = document.querySelector('#similar-wizard-template').content; // находим шаблон
