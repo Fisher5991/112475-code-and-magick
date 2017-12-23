@@ -28,10 +28,10 @@
   var getRank = function (wizard) {
     var rank = 0;
 
-    if (wizard.colorCoat === coatColorCurrent) {
+    if (wizard.colorCoat === coatColors[coatColorCurrent]) {
       rank += 2;
     }
-    if (wizard.colorEyes === eyesColorCurrent) {
+    if (wizard.colorEyes === eyesColors[eyesColorCurrent]) {
       rank += 1;
     }
     return rank;
@@ -58,15 +58,15 @@
   };
 
   var colorizeElement = function (objectColor, arrayColors, colorIndex, colorCurrent, attribute) {
+    debugger;
     objectColor.addEventListener('click', function () {
       if (colorIndex >= arrayColors.length) {
         colorIndex = 0;
       }
-      objectColor.style[attribute] = arrayColors[colorIndex];
       colorCurrent = arrayColors[colorIndex];
+      objectColor.style[attribute] = colorCurrent;
       colorIndex++;
       updateWizards();
-      return colorIndex;
     });
   };
 
